@@ -84,11 +84,7 @@ exports.getUserById = async (req, res) => {
 
 exports.login = async (req, res) => {
     try {
-        const { email, password } = req.body; // Assuming you send email and password in the request body
-
-        // Validate email and password as needed
-
-        // Find the user by email and password in the database
+        const { email, password } = req.body;
         const user = await User.findOne({ email, password });
 
         if (!user) {

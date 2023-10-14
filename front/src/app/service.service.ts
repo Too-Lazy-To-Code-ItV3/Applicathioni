@@ -15,4 +15,9 @@ export class ServiceService {
   create(user: any) {
     return this.http.post(this.url + '/User/add', user);
   }
+
+  Login(Email:string,Password:string){
+    const body={Email,Password};
+    return this.http.post(this.url+'/User/login',body);
+  }
 }

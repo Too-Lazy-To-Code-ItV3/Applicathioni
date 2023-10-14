@@ -4,10 +4,13 @@ import { CommonModule } from '@angular/common';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { Routes, RouterModule } from '@angular/router';
+import { LandingComponent } from './landing/landing.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/signUp', pathMatch: 'full' },
-  {path:'signUp',component:SignUpComponent}
+  {path: '', redirectTo: '/signIn', pathMatch: 'full' },
+  {path:'signUp',component:SignUpComponent},
+  {path:'signIn',component:SignInComponent},
+  {path:'Home',component:LandingComponent}
 ];
 
 @NgModule({
