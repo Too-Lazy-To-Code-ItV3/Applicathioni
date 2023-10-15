@@ -84,8 +84,8 @@ exports.getUserById = async (req, res) => {
 
 exports.login = async (req, res) => {
     try {
-        const { email, password } = req.body;
-        const user = await User.findOne({ email, password });
+        const { Email, Password } = req.body;
+        const user = await User.findOne({ Email, Password });
 
         if (!user) {
             return res.status(401).json({ message: "Authentication failed. Invalid email or password." });

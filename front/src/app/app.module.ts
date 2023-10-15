@@ -13,6 +13,9 @@ import { ShopComponent } from './shop/shop.component';
 import { CartComponent } from './cart/cart.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { AddItemComponent } from './add-item/add-item.component';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import { ItemComponent } from './item/item.component';
+import { ModifyItemComponent } from './modify-item/modify-item.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +27,18 @@ import { AddItemComponent } from './add-item/add-item.component';
     ShopComponent,
     CartComponent,
     NotfoundComponent,
-    AddItemComponent
+    AddItemComponent,
+    ItemComponent,
+    ModifyItemComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    SweetAlert2Module.forRoot(),
+    SweetAlert2Module,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

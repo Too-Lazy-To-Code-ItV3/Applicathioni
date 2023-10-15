@@ -9,6 +9,8 @@ import { ShopComponent } from './shop/shop.component';
 import { CartComponent } from './cart/cart.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { AddItemComponent } from './add-item/add-item.component';
+import { ItemComponent } from './item/item.component';
+import { ModifyItemComponent } from './modify-item/modify-item.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/signIn', pathMatch: 'full' },
@@ -18,6 +20,8 @@ const routes: Routes = [
   {path:'Shop',component:ShopComponent},
   {path:'Cart',component:CartComponent},
   {path:'Add',component:AddItemComponent},
+  {path:'item/:id',component:ItemComponent},
+  {path:'modify/:id',component:ModifyItemComponent},
   {path:'**',component:NotfoundComponent}
 ];
 

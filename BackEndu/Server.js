@@ -14,6 +14,8 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 app.use('/User', UserRoutes);
+
+app.use( '/getimage' , express.static('./upload')  );
 app.use('/Item', ItemRoutes);
 
 

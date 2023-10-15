@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ServiceService {
-  Users: any[] = [];
+  Items: any[] = [];
   url = "http://localhost:5000"
 
   constructor(private http: HttpClient) { }

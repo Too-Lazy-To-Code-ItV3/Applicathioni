@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ServiceService } from '../service.service';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-sign-in',
@@ -20,6 +21,11 @@ export class SignInComponent {
         this.router.navigate(['/Home'])
       },
       (error)=>{
+        Swal.fire(
+          'Wrong !',
+          'make sure of your login.',
+          'error'
+        )
         console.error('login failed',error.error.message);
       }
     );

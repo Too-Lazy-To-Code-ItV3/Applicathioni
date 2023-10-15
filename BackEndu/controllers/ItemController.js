@@ -1,4 +1,23 @@
 const Item = require("../models/Item");
+const multer = require('multer');
+
+let filename = '';
+
+const mystorage = multer.diskStorage(
+    {
+        destination: './upload',
+        filename:( req , file , cb )=>{
+            let date = Date.now();
+            //53453535345.jpg
+            // image/png
+            // [ 'image', 'png' ]
+            let fl = date + '.' + file.mimetype.split('/')[1];
+            cb(null, fl);
+            filename = fl;
+        } 
+    }
+);
+exports.upload = multer({ storage: mystorage });
 
 exports.AllItems = async (req, res) => {
     try {
@@ -50,6 +69,7 @@ exports.addItem = async (req, res) => {
 
     try {
         const item = req.body;
+        item.image=filename;
         console.log("Item body", item);
 
         const newItem = await Item.create(item)

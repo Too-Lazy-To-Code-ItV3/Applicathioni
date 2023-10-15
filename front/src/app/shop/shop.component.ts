@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
+import { ServiceService } from '../service.service';
 
 @Component({
   selector: 'app-shop',
@@ -6,5 +7,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./shop.component.css']
 })
 export class ShopComponent {
+  constructor(public _service: ServiceService) {
+   
+    
+  }
+  items:any;
+  ngOnInit(): void {
+    this._service.ShowItems().subscribe((res:any)=>{
+      console.log("get items res ",res)
+      this.items=res;
+    },err=>{
+      console.log("err",err)
+    })  
+  }
 
 }
+
