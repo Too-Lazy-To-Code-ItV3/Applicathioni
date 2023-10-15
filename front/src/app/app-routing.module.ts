@@ -5,12 +5,20 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { Routes, RouterModule } from '@angular/router';
 import { LandingComponent } from './landing/landing.component';
+import { ShopComponent } from './shop/shop.component';
+import { CartComponent } from './cart/cart.component';
+import { NotfoundComponent } from './notfound/notfound.component';
+import { AddItemComponent } from './add-item/add-item.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/signIn', pathMatch: 'full' },
   {path:'signUp',component:SignUpComponent},
   {path:'signIn',component:SignInComponent},
-  {path:'Home',component:LandingComponent}
+  {path:'Home',component:LandingComponent},
+  {path:'Shop',component:ShopComponent},
+  {path:'Cart',component:CartComponent},
+  {path:'Add',component:AddItemComponent},
+  {path:'**',component:NotfoundComponent}
 ];
 
 @NgModule({

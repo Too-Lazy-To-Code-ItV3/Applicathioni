@@ -1,0 +1,24 @@
+
+<form>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Name</label>
+      <input [(ngModel)]=item.name name="Name"type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Product name">
+      <small id="emailHelp" class="form-text text-muted">brief name for product</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Description</label>
+      <input [(ngModel)]=item.description name="Description"type="text" class="form-control" id="exampleInputPassword1" placeholder="Description">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Price</label>
+      <input [(ngModel)]=item.price name="Price" type="Number" class="form-control" id="exampleInputPassword1" placeholder="200">
+    </div>
+
+    <div class="form-group">
+        <label for="exampleFormControlFile1">Example file input </label>
+        <br>
+        <input [(ngModel)]=item.image name="Image"type="file" class="form-control-file" id="exampleFormControlFile1">
+      </div>
+      <br>
+    <button (click)="AddItem()" type="submit" class="btn btn-primary">Submit</button>
+  </form>

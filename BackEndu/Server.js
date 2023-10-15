@@ -8,11 +8,13 @@ app.use(cors());
 
 
 UserRoutes = require('./routes/UserRoute');
+ItemRoutes=require('./routes/ItemRoute');
 app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
 
 app.use('/User', UserRoutes);
+app.use('/Item', ItemRoutes);
 
 
 //connect to mongoDb 

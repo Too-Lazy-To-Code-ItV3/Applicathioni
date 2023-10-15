@@ -8,13 +8,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LandingComponent } from './landing/landing.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { ShopComponent } from './shop/shop.component';
+import { CartComponent } from './cart/cart.component';
+import { NotfoundComponent } from './notfound/notfound.component';
+import { AddItemComponent } from './add-item/add-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignUpComponent,
     SignInComponent,
-    LandingComponent
+    LandingComponent,
+    NavbarComponent,
+    ShopComponent,
+    CartComponent,
+    NotfoundComponent,
+    AddItemComponent
   ],
   imports: [
     BrowserModule,
