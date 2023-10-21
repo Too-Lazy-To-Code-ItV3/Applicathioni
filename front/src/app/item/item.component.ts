@@ -46,7 +46,8 @@ delete()
 
       this._service.DeleteItem(this.id).subscribe((res:any)=>{
         //refersh automatic 
-        this.ngOnInit();
+        this.ngOnInit()
+       this.router.navigate(['/Shop']);
         Swal.fire(
           'Deleted!',
           'Your file has been deleted.',

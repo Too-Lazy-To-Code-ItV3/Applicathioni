@@ -46,6 +46,7 @@ export class ModifyItemComponent {
 
 
     this._service.UpdateItem(myFormData,this.id).subscribe((res: any) => {
+      console.log(res)
       Swal.fire({
         position: 'center',
         icon: 'success',
